@@ -1,0 +1,18 @@
+$btnPadiing : 15px;
+$btnMargin : 20px;
+
+.ps{
+    // padding: $btnPadiing;
+    // margin: $btnMargin;    
+}
+.ab-holder{
+    position: absolute;
+    left: 0;
+    // margin: 10px;
+    top: 200px;
+}
+.re-holder{
+    position: relative;
+    left: 0;
+    // top: 100;
+}

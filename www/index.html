@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyPc">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-------------------- 程序所需要的CSS文件 --------------------------------------->
+    <link rel="stylesheet" href="lib/bootstrap-css/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-------------------- 程序所需要的js文件 --------------------------------------->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-touch/angular-touch.js"></script>
+
+    <!-------------------- 程序自己编写的js文件 ---------------------------------->
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="MyApp as vm">
+    <my-position></my-position>
+    <div class="ab-holder">
+        <my-position class="ps"></my-position>
+    </div>
+    <div class="re-holder">
+        <my-position></my-position>
+    </div>
+</body>
+
+</html>

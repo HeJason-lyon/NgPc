@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var Animal = {
+            createNew: function() {
+                var animal = {};　　　　　　
+                animal.name1 = "Animal";　　　　　　
+                animal.makeSound1 = function() {
+                    console.log("滴滴");
+                };　　　　　　
+                return animal;
+            },
+            fn1: function() {
+                console.log(1);
+            }
+        }
+        var Cat = {
+            createNew: function() {
+                var cat = Animal.createNew();　　　　　　
+                cat.name = "大毛";　　　　　　
+                cat.makeSound = function() {
+                    console.log("喵喵喵");
+                };　　　　　　
+                return cat;
+            },
+            fn1: function() {
+                console.log(2);
+            }
+        }
+
+        var cat = new Cat.createNew();
+        console.log(Cat.fn1()); //静态方法 打印出 2 方法被覆盖
+        console.log(cat.name); //打印出 大毛
+        console.log(cat.makeSound()); //打印出 喵喵
+        console.log(cat.name1);//打印出 Animal
+        
+        console.log(cat instanceof Cat);//报错 证明无法使用instanceof 判断
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
