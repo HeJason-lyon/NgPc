@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     minifyCss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    rename = require('gulp-rename');
 
 
 gulp.task('webServe', function () {
@@ -16,11 +17,15 @@ gulp.task('webServe', function () {
 
 /**压缩js */
 gulp.task('miniJs',function(){
-    return gulp.src('./www/js/**/*.js').pipe(uglify()).pipe(gulp.dest('./www/mini'));
+    return gulp.src('./www/js/**/*.js').pipe(uglify()).pipe(rename({
+        extname: ".min.js"
+    })).pipe(gulp.dest('./www/mini'));
 });
 /**压缩CSS */
 gulp.task('miniCss',function(){
-    return gulp.src('./www/css/**/*.css').pipe(minifyCss()).pipe(gulp.dest('./www/mini'));
+    return gulp.src('./www/css/**/*.css').pipe(minifyCss()).pipe(rename({
+        extname: ".min.css"
+    })).pipe(gulp.dest('./www/css'));
 });
 
 // /**合并文件 */
